@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Include Tailwind CSS styles -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css">
+  <title>Lunch Ordering Interface</title>
+</head>
+<body>
+  <!-- Navigation bar -->
+  <nav class="bg-gray-900 text-white py-3">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-lg font-bold">Lunch Ordering</h1>
+      <ul class="flex">
+        <li class="mr-4"><a href="#" class="hover:text-gray-500">Home</a></li>
+        <li class="mr-4"><a href="#" class="hover:text-gray-500">Order</a></li>
+        <li><a href="#" class="hover:text-gray-500">Profile</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+  <!-- Main content area -->
+  <main class="container mx-auto py-6">
+    <h2 class="text-lg font-bold mb-4">Welcome to the Lunch Ordering Interface</h2>
+    
+    <!-- Order form -->
+    <form class="bg-white rounded-lg shadow-md p-6 mb-6">
+      <h3 class="text-lg font-bold mb-4">Order Form</h3>
+      <div class="mb-4">
+        <label for="name" class="block text-gray-700 font-bold mb-2">Name</label>
+        <input type="text" id="name" name="name" class="border rounded-lg py-2 px-3 w-full" required>
+      </div>
+      <div class="mb-4">
+        <label for="department" class="block text-gray-700 font-bold mb-2">Department</label>
+        <select id="department" name="department" class="border rounded-lg py-2 px-3 w-full" required>
+          <option value="">-- Select Department --</option>
+          <option value="Marketing">Marketing</option>
+          <option value="Sales">Sales</option>
+          <option value="Engineering">Engineering</option>
+        </select>
+      </div>
+      <div class="mb-4">
+        <label for="meal" class="block text-gray-700 font-bold mb-2">Meal</label>
+        <select id="meal" name="meal" class="border rounded-lg py-2 px-3 w-full" required>
+          <option value="">-- Select Meal --</option>
+          <option value="Chicken Teriyaki">Chicken Teriyaki</option>
+          <option value="Vegetable Curry">Vegetable Curry</option>
+          <option value="Grilled Cheese Sandwich">Grilled Cheese Sandwich</option>
+        </select>
+      </div>
+      <div class="mb-4">
+        <label for="quantity" class="block text-gray-700 font-bold mb-2">Quantity</label>
+        <input type="number" id="quantity" name="quantity" class="border rounded-lg py-2 px-3 w-full" min="1" max="10" value="1" required>
+      </div>
+      <button type="submit" class="bg-blue-500 text-white rounded-lg py-2 px-4 hover:bg-blue-600">Place Order  </button>
+    </form>
+    
+    <!-- Order history -->
+    <div class="bg-white rounded-lg shadow-md p-6">
+      <h3 class="text-lg font-bold mb-4">Order History</h3>
+      <table class="w-full border-collapse">
+        <thead>
+          <tr>
+            <th class="py-2 px-4 bg-gray-100 border">Name</th>
+            <th class="py-2 px-4 bg-gray-100 border">Department</th>
+            <th class="py-2 px-4 bg-gray-100 border">Meal</th>
+            <th class="py-2 px-4 bg-gray-100 border">Quantity</th>
+            <th class="py-2 px-4 bg-gray-100 border">Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Example row -->
+          <tr>
+            <td class="py-2 px-4 border">John Doe</td>
+            <td class="py-2 px-4 border">Marketing</td>
+            <td class="py-2 px-4 border">Chicken Teriyaki</td>
+            <td class="py-2 px-4 border">2</td>
+            <td class="py-2 px-4 border">2023-04-15</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+</main>
+</body>
+</html>    
